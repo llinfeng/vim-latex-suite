@@ -1,0 +1,68 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+\documentclass{beamer}
+% Package for non-breaking words 
+\usepackage[none]{hyphenat}
+\mode<presentation> {
+\usetheme{AnnArbor}
+}
+\usepackage{graphicx} % Allows including images \includegraphics
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{color}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\usepackage{amssymb,amsmath,amsthm,mathrsfs,verbatim}
+\usepackage{color}\newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
+\usepackage{graphicx}%% This gives the book mark!
+\usepackage{pdfpages} %merge pdf with: \includepdfmerge{heine-borel_proof.pdf,-}
+\usepackage{graphicx}%to input images \includegraphics[width=130mm]{Open_Open}
+\usepackage{amsmath}
+\title[]{<+TitleGoesHere+>} % The  short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{<+Name+>} % Your name
+\institute[<+Institution+>] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{University of Michigan \\ %Your institution for the title page
+\medskip
+ \textit{<+email+>} %Your email address
+}\date{\today} % Date, can be changed to a custom date
+
+\usepackage{listings} % for displaying codes
+            %\begin{lstlisting}
+            %place your source code here
+            %\end{lstlisting}
+\usepackage{wasysym} %For smalling and frownie faces;
+
+\newcommand{\A}{{\Gamma^A}}
+\newcommand{\B}{{\Gamma^B}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\Q}{{\mathbb Q}}
+\newcommand{\C}{{\mathbb C}}
+\newcommand{\N}{{\mathbb N}}
+\newcommand{\T}{{\mathcal T}}
+\newcommand{\s}{{\mathcal S}}
+\newcommand{\p}{\mathfrak p}
+\newcommand{\2}{\textbf{2}}
+\newcommand{\1}{\textbf{1}}
+\newcommand{\II}{\ensuremath{\textbf{\infty}}}
+\newcommand{\half}{\ensuremath{\frac{1}{2}}}
+\renewcommand{\phi}{\varphi}
+
+
+\newtheorem*{claim}{Claim}
+\newtheorem*{proposition}{Proposition}
+\newtheorem*{conclusion}{Conclusion}
+\newtheorem*{remark}{Remark}
+
+\usepackage{multicol}
+
+\begin{document}
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+
+
+\end{document}

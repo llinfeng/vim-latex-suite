@@ -1,0 +1,129 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+\documentclass[12pt]{article}
+% Package for non-breaking words
+%\usepackage[none]{hyphenat} % This is a problematic one.
+%
+\usepackage[margin=1in]{geometry}
+
+% For standard math
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+%Set up the margins
+%\usepackage[left=.7in,right=.7in,top=.7in,bottom=.7in]{geometry}
+\usepackage{amssymb,amsmath,amsthm,mathrsfs,verbatim}
+\usepackage{extarrows}%% For extending the equal sign when there is   \xlongequal{<stuff>}
+%\sout{} strike through!
+\usepackage{marginnote}%\marginnote{}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+%Create a header at the top of every page
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+\usepackage{pdfpages} %merge pdf with: \includepdfmerge{heine-borel_proof.pdf,-}
+\usepackage{graphicx}%to input images \includegraphics[width=130mm]{Open_Open}
+\usepackage{lipsum}
+\usepackage{color}
+%You can define commands for the things you use frequently.
+\newcommand{\al}{\aleph}
+\newcommand{\A}{\mathcal{A}}
+\renewcommand{\c}{\mathfrak c}
+\newcommand{\C}{{\mathbb C}}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathfrak E}
+\renewcommand{\L}{{\mathcal L}}
+\newcommand{\M}{\mathcal M}
+\newcommand{\N}{{\mathbb N}}
+\renewcommand{\P}{\mathcal {P}}
+\newcommand{\Q}{{\mathbb Q}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\X}{{\mathlarger{\mathcal X}}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\To}{\Rightarrow}
+\newcommand{\WLOG}{With out loss of generality}
+\newcommand{\card}{\text{card }}
+
+% The limits.
+\newcommand{\limk}{\underset{k\to\infty}\lim}
+\newcommand{\limn}{\underset{n\to\infty}\lim}
+\newcommand{\liminfn}{\underset{n\to\infty}{\underline{\lim}}}
+\newcommand{\liminfk}{\underset{k\to\infty}{\underline{\lim}}}
+\newcommand{\liminfp}{\underset{p\to\infty}{\underline{\lim}}}
+\newcommand{\liminfj}{\underset{j\to\infty}{\underline{\lim}}}
+\newcommand{\limsupn}{\underset{n\to\infty}{\overline{\lim}}}
+\newcommand{\limsupk}{\underset{k\to\infty}{\overline{\lim}}}
+\newcommand{\limsupp}{\underset{p\to\infty}{\overline{\lim}}}
+\newcommand{\limsupr}{\underset{r\to\infty}{\overline{\lim}}}
+\newcommand{\sgn}{\text{sgn}}
+% For L^p space
+\newcommand{\Linfty}{{L^\infty(E)}}
+\newcommand{\Lp}{{L^{p}(E)}}
+\newcommand{\Lq}{{L^{q}(E)}}
+\usepackage{mdframed}%needed for box like theorems.\newmdtheoremenv %In the box, the footnotes are more handy! ^.^
+% Additional structures, enumerated through section number.
+% Found as of 2015-06-30
+% Fonts in the environments will be normal (standing straight up)
+\theoremstyle{definition}
+% Define all the theorem-based environments.
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{claimbox}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{fact}[theorem]{fact}
+\newtheorem{idea}[theorem]{Idea}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remark_box}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newmdtheoremenv{question_sqrt}{Question}
+\newmdtheoremenv{typo}{Typo Correction}
+% Found as of 2015-06-30
+% Fonts will resume to be italic in for the environments thereafter.
+\theoremstyle{plain}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem*{defn}{Definition}
+\newtheorem*{rudin}{Rudin Says}
+\newtheorem*{poblem}{\textcolor[rgb]{1.00,0.00,0.00}{Problem}}
+\usepackage{mathrsfs} % enable people to use \mathscr{A}
+
+% Highlighting and coloring
+\usepackage{color}
+\usepackage{xcolor}
+\newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
+%
+% Symbol packages
+\usepackage{relsize} % For large symbles: \mathlarger{math_expression}
+\usepackage{marvosym} % For symbols
+\usepackage{colonequals}
+\usepackage{bbm} % LaTeX support for "blackboard-style" cm fonts
+%
+% To make footnote numering by section.
+\makeatletter
+\@addtoreset{footnote}{section}
+\makeatother
+%
+\usepackage{enumerate}
+%\usepackage{enumitem} % For using: \begin{itemize}[leftmargin=-.5in]
+%\usepackage{comment}
+\title{<+Title of the Note+>}
+\author{Linfeng Li \\ llinfeng@umich.edu}
+
+
+\begin{document}
+<++>
+\end{document}

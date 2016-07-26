@@ -1,0 +1,19 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+% 载入文档类型，`ctexart' 表示
+% 我们要写一篇「中文文章」。
+\documentclass[UTF8]{ctexart}
+
+\usepackage[margin=0.5in]{geometry}
+\title{What a Wonderful World}
+\author{Liam Huang}
+\date{\today}
+
+\usepackage{multicol}   
+\begin{document}
+\begin{multicols}{2}
+% Here goes the content of the novel.
+\end{multicols}
+\end{document}

@@ -1,0 +1,35 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+\documentclass[12pt]{article}
+% Package for non-breaking words 
+\usepackage[none]{hyphenat}
+\usepackage[margin=1in]{geometry}
+
+\documentclass[hyperref, UTF8]{ctexart}
+\usepackage[margin=1.2in]{geometry}
+\makeatletter
+\g@addto@macro{\CTEX@section@format}{\raggedright}
+\makeatother
+\usepackage{amsmath}
+
+\title{}
+\author{}
+\date{\vspace{-5ex}}
+
+% Let there be no headers.
+\pagestyle{plain}
+
+% Deal with the error message on Fonts in ``Contents''.
+\usepackage{lmodern}
+% Enumerate using ``a)''
+\usepackage{enumerate}
+
+\usepackage{hyperref}
+
+\begin{document}
+\maketitle
+<++>
+
+\end{document}
