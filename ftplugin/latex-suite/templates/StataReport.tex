@@ -74,6 +74,13 @@ centered, text width=7cm, draw=black, fill=red]
 \usepackage[toc]{multitoc}
 \renewcommand*{\multicolumntoc}{2}
 
+% Added: 2017-11-02 ==> everyone shall use the same master *.bib file.
+\usepackage[style=authoryear, maxbibnames=99, natbib=true,backend=bibtex]{biblatex}
+\renewcommand\nameyeardelim{, }
+\addbibresource{c:/users/llinfeng/Nutstore/Research/Zotero_Full_Synced.bib}
+% \addbibresource{../../Nutstore/Research/Zotero_Full_Synced.bib}
+% \printbibliography % <== for printing the list of references
+
 
 \begin{document}
 <++>
